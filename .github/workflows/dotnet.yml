@@ -1,0 +1,24 @@
+name: Slimforge.RAG Demo Build
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Pulling Code
+      uses: actions/checkout@v3
+    - name: Installing .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 9.0.7
+    - name: Restoring Packages
+      run: dotnet restore
+    - name: Building Solution
+      run: dotnet build --no-restore
+    - name: Running Tests
+      run: dotnet test --no-build --verbosity normal
