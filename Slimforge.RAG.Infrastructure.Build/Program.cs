@@ -62,7 +62,7 @@ namespace Slimforge.RAG.Infrastructure.Build
 
                                     With = new TargetDotNetVersionV3
                                     {
-                                        DotNetVersion = "9.0.0"
+                                        DotNetVersion = "9.0.7"
                                     }
                                 },
 
@@ -88,9 +88,9 @@ namespace Slimforge.RAG.Infrastructure.Build
 
             //string buildScriptPath = "../../../../.github/workflows/dotnet.yml";
             string buildScriptPath = "../.github/workflows/dotnet.yml";
-            string directoryPath = Path.GetDirectoryName(buildScriptPath);
+            string? directoryPath = Path.GetDirectoryName(buildScriptPath);
 
-            if (!Directory.Exists(directoryPath))
+            if (directoryPath != null && !Directory.Exists(directoryPath))
             {
                 Directory.CreateDirectory(directoryPath);
             }
