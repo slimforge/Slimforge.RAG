@@ -9,7 +9,7 @@ using ADotNet.Models.Pipelines.GithubPipelines.DotNets;
 using ADotNet.Models.Pipelines.GithubPipelines.DotNets.Tasks;
 using ADotNet.Models.Pipelines.GithubPipelines.DotNets.Tasks.SetupDotNetTaskV3s;
 
-namespace Standard.AI.OpenAI.Infrastructure.Build
+namespace Slimforge.RAG.Infrastructure.Build
 {
     internal class Program
     {
@@ -62,7 +62,7 @@ namespace Standard.AI.OpenAI.Infrastructure.Build
 
                                     With = new TargetDotNetVersionV3
                                     {
-                                        DotNetVersion = "9.0.7"
+                                        DotNetVersion = "9.0.0"
                                     }
                                 },
 
