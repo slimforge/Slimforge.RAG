@@ -62,7 +62,7 @@ namespace Slimforge.RAG.Infrastructure.Build
 
                                     With = new TargetDotNetVersionV3
                                     {
-                                        DotNetVersion = "9.0.7"
+                                        DotNetVersion = "9.0.100"
                                     }
                                 },
 

@@ -15,7 +15,7 @@ jobs:
     - name: Installing .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 9.0.7
+        dotnet-version: 9.0.100
     - name: Restoring Packages
       run: dotnet restore
     - name: Building Solution
